@@ -2,7 +2,7 @@ class Node:
     def __init__(self,value):
         self.value = value
         self.next = None
-        self.rep = self # Pointer to set's representative
+        self.rep = self  # Pointer to set's representative
 
 class DisjointLinkedList:
     def __init__(self):
@@ -12,7 +12,7 @@ class DisjointLinkedList:
         node = Node(x)
         self.representatives[x] = node
 
-    def find(self, x):
+    def find_set(self, x):
         return self.representatives[x].rep
 
     def union(self,x,y):
@@ -20,7 +20,7 @@ class DisjointLinkedList:
         rep_y = self.representatives[y].rep
 
         if rep_x == rep_y:
-            return   # Already in the same set
+            return  # Already in the same set
 
         current = rep_x
         while current.next:

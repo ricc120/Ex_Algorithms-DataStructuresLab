@@ -2,7 +2,7 @@ class Node:
     def __init__(self,value):
         self.value = value
         self.next = None
-        self.rep = self # Pointer to set's representative
+        self.rep = self
 
 class DisjointSetLinkedListWeighted:
     def __init__(self):
