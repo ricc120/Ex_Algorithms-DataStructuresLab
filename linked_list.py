@@ -4,7 +4,8 @@ class Node:
         self.next = None
         self.rep = self  # Pointer to set's representative
 
-class DisjointLinkedList:
+
+class DisjointSetLinkedList:
     def __init__(self):
         self.representatives = {}
 
