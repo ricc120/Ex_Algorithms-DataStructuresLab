@@ -25,7 +25,7 @@ class DisjointSetLinkedListWeighted:
             return
 
         # Weighted Union Heuristic: append the short list to the long one
-        if self.sizes[rep_x] < self.sizes[rep_y]:
+        if self.sizes[rep_x.value] < self.sizes[rep_y.value]:
             rep_x, rep_y = rep_y, rep_x # Swap
 
         current = rep_x
@@ -39,8 +39,5 @@ class DisjointSetLinkedListWeighted:
             current = current.next
 
         # Update size
-        self.sizes[rep_x] += self.sizes[rep_y]
-        del self.sizes[rep_y]
-
-
-
+        self.sizes[rep_x.value] += self.sizes[rep_y.value]
+        del self.sizes[rep_y.value]
